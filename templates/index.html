@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-md-10">
+        <h1>Welcome to 画像認識アプリ</h1>
+    </div>
+    <div class="col-md-2">
+        <a href="/rslt" class="btn btn-primary">結果ページへ</a>
+    </div>
+</div>
+
+<hr>
+<p>アップロードした画像をAIが解析して、何が写っているか判定するよ。</p>
+
+<br>
+<form action="/rslt" method="POST">
+    <input type="file" name="image_to_analyze" accept="image/*">
+    <br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
